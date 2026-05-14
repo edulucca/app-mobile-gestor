@@ -1,0 +1,19 @@
+# catalog-info.yaml — repo myorg/app-mobile-gestor
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: app-mobile-gestor
+  title: App Mobile Gestor de Frota
+  description: Aplicativo iOS e Android em React Native para acompanhamento em tempo real da frota.
+  tags: [react-native, mobile, ios, android]
+  annotations:
+    github.com/project-slug: myorg/app-mobile-gestor
+spec:
+  type: website
+  lifecycle: production
+  owner: group:squad-frontend
+  system: customer-portal
+  consumesApis:
+    - openapi-bff-mobile
+  dependsOn:
+    - component:default/component-library-ui
